@@ -1,20 +1,15 @@
 import { Component, State } from '@stencil/core';
 
 @Component({
-    tag: 'app-title',
-    styleUrl: 'app-title.scss'
+    tag: 'app-popup-information',
+    styleUrl: 'app-popup-information.scss'
 })
 export class AppTitle {
 
-    @State() rootPath: string = './assets/pictures/';
-    @State() rootIconPath: string = './assets/icon/';
-    @State() fileExtension: string = '.png';
 
-    @State() mfPictureUrl: string;
 
 
     componentWillLoad() {
-        this.mfPictureUrl = this.rootIconPath + "MobileFactory_Logo.svg";
     }
 
     render() {

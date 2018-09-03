@@ -41,6 +41,9 @@ export namespace Components {
   interface AppPhoto {}
   interface AppPhotoAttributes extends StencilHTMLAttributes {}
 
+  interface AppPopupInformation {}
+  interface AppPopupInformationAttributes extends StencilHTMLAttributes {}
+
   interface AppPresentation {}
   interface AppPresentationAttributes extends StencilHTMLAttributes {}
 
@@ -80,6 +83,7 @@ declare global {
     'AppFooter': Components.AppFooter;
     'AppHome': Components.AppHome;
     'AppPhoto': Components.AppPhoto;
+    'AppPopupInformation': Components.AppPopupInformation;
     'AppPresentation': Components.AppPresentation;
     'AppProfile': Components.AppProfile;
     'AppProjectsGallery': Components.AppProjectsGallery;
@@ -96,6 +100,7 @@ declare global {
     'app-footer': Components.AppFooterAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-photo': Components.AppPhotoAttributes;
+    'app-popup-information': Components.AppPopupInformationAttributes;
     'app-presentation': Components.AppPresentationAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-projects-gallery': Components.AppProjectsGalleryAttributes;
@@ -147,6 +152,12 @@ declare global {
     new (): HTMLAppPhotoElement;
   };
 
+  interface HTMLAppPopupInformationElement extends Components.AppPopupInformation, HTMLStencilElement {}
+  var HTMLAppPopupInformationElement: {
+    prototype: HTMLAppPopupInformationElement;
+    new (): HTMLAppPopupInformationElement;
+  };
+
   interface HTMLAppPresentationElement extends Components.AppPresentation, HTMLStencilElement {}
   var HTMLAppPresentationElement: {
     prototype: HTMLAppPresentationElement;
@@ -191,6 +202,7 @@ declare global {
     'app-footer': HTMLAppFooterElement
     'app-home': HTMLAppHomeElement
     'app-photo': HTMLAppPhotoElement
+    'app-popup-information': HTMLAppPopupInformationElement
     'app-presentation': HTMLAppPresentationElement
     'app-profile': HTMLAppProfileElement
     'app-projects-gallery': HTMLAppProjectsGalleryElement
@@ -207,6 +219,7 @@ declare global {
     'app-footer': HTMLAppFooterElement;
     'app-home': HTMLAppHomeElement;
     'app-photo': HTMLAppPhotoElement;
+    'app-popup-information': HTMLAppPopupInformationElement;
     'app-presentation': HTMLAppPresentationElement;
     'app-profile': HTMLAppProfileElement;
     'app-projects-gallery': HTMLAppProjectsGalleryElement;
