@@ -1,0 +1,47 @@
+@mixin two-column-gallery {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+}
+
+@mixin three-column-gallery {
+    flex: 0 0 33.33333%;
+    width: 33.33333%;
+    max-width: 33.33333%;
+}
+
+@mixin four-column-gallery {
+    flex: 0 0 25%;
+    width: 25%;
+    max-width: 25%;
+}
+
+app-projects-gallery {
+    .grid {
+        ion-row {
+            display: flex;
+            flex-direction: normal;
+            flex-wrap: wrap;
+
+            ion-col {
+
+                &.column-2 {
+                    @include two-column-gallery()
+                }
+
+                &.column-3 {
+                    @include three-column-gallery()
+                }
+
+                &.column-4 {
+                    @include four-column-gallery()
+                }
+
+                img.project-logo {
+                    background-size: cover;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

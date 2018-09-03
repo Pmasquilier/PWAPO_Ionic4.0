@@ -1,0 +1,75 @@
+app-client {
+    .scroll-inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swipper-slide img{
+        height:auto;
+        max-height:100%;
+        max-width:auto;
+        width:auto;
+      }
+      lazy-img {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .textDiv {
+      color: white;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.7rem;
+    }
+    .logo {
+      max-height: 20%;
+      max-width: 20%;
+      height: 3rem;
+      width: 3rem;
+      margin: 1.3rem;
+    }
+    .flexDiv {
+      display: flex;
+      align-self: flex-start;
+      width: 100%
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 1rem;
+      background: inherit;
+      /* Center slide text vertically */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-container-v {
+      display: flex;
+      flex-direction: column;
+    }
+    .weloveaero {
+      background: #C62731;
+    }
+    .activDos {
+      background: #E9195F;
+    }
+    .bforbank {
+      background: #493628;
+    }
+    .maflotte {
+      background: #005BBB;
+    }
+    .lighthouse {
+      background: #00205B;
+    }
+  }
+  

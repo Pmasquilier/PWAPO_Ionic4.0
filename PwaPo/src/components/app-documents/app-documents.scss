@@ -1,0 +1,29 @@
+app-documents {
+    .margined_thumbnail {
+      margin-right: 2%;
+    }
+    .openButton {
+      position: absolute;
+      right: 1rem;
+    }
+    .openImg {
+      color: var(--app-primary-color);
+      font-size: 200%;
+      margin-right: 2%;
+      margin-top: 2%;
+    }
+    .verticalDiv {
+      display: flex;
+      flex-direction: column;
+    }
+    .greyText {
+      color: var(--app-primary-color);
+    }
+    ion-list .item {
+      padding: 0;
+    }
+    .padded_top {
+      padding-top: 1rem;
+    }
+  }
+  

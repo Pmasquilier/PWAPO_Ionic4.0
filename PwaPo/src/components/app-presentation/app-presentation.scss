@@ -1,0 +1,30 @@
+app-presentation {
+    ion-scroll {
+      padding: 15px;
+      p {
+        font-weight: bold;
+      }
+      stencil-route-link a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+      }
+    }
+    .margined-div {
+      margin: 1.5rem;
+    }
+    .big-text {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .small-text {
+      font-size: 0.8rem;
+      color: var(--app-primary-color);
+    }
+    .colored-text {
+      color: var(--app-primary-color);
+    }
+  }
+  
