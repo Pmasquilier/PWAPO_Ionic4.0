@@ -26,5 +26,9 @@ app-presentation {
     .colored-text {
       color: var(--app-primary-color);
     }
+
+    .swiper-slide{
+     max-height: 90% !important;
+    }
   }
   

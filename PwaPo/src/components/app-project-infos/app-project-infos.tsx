@@ -38,7 +38,7 @@ export class AppProjectInfos {
                     })}
                 </ion-slides>
             <ion-card-content>
-              <ion-card-title>
+              <ion-card-title class="underline">
                {this.projet.directoryName}
                 </ion-card-title>
               <p>
