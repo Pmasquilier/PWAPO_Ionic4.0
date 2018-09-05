@@ -45,6 +45,7 @@ export class MyApp {
             <ion-route url='/projects' component='app-projects-gallery'></ion-route>
             <ion-route url='/client' component='app-client'></ion-route>
             <ion-route url='/documents' component='app-documents'></ion-route>
+            <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
           </ion-router>
           <ion-nav root='app-home'></ion-nav>
           <app-footer />

@@ -51,6 +51,13 @@ export namespace Components {
     'match'?: MatchResults;
   }
 
+  interface AppProjectInfos {
+    'Id': string;
+  }
+  interface AppProjectInfosAttributes extends StencilHTMLAttributes {
+    'Id'?: string;
+  }
+
   interface AppProjectsGallery {}
   interface AppProjectsGalleryAttributes extends StencilHTMLAttributes {}
 
@@ -82,6 +89,7 @@ declare global {
     'AppPhoto': Components.AppPhoto;
     'AppPresentation': Components.AppPresentation;
     'AppProfile': Components.AppProfile;
+    'AppProjectInfos': Components.AppProjectInfos;
     'AppProjectsGallery': Components.AppProjectsGallery;
     'AppRoot': Components.AppRoot;
     'AppTitle': Components.AppTitle;
@@ -98,6 +106,7 @@ declare global {
     'app-photo': Components.AppPhotoAttributes;
     'app-presentation': Components.AppPresentationAttributes;
     'app-profile': Components.AppProfileAttributes;
+    'app-project-infos': Components.AppProjectInfosAttributes;
     'app-projects-gallery': Components.AppProjectsGalleryAttributes;
     'app-root': Components.AppRootAttributes;
     'app-title': Components.AppTitleAttributes;
@@ -159,6 +168,12 @@ declare global {
     new (): HTMLAppProfileElement;
   };
 
+  interface HTMLAppProjectInfosElement extends Components.AppProjectInfos, HTMLStencilElement {}
+  var HTMLAppProjectInfosElement: {
+    prototype: HTMLAppProjectInfosElement;
+    new (): HTMLAppProjectInfosElement;
+  };
+
   interface HTMLAppProjectsGalleryElement extends Components.AppProjectsGallery, HTMLStencilElement {}
   var HTMLAppProjectsGalleryElement: {
     prototype: HTMLAppProjectsGalleryElement;
@@ -193,6 +208,7 @@ declare global {
     'app-photo': HTMLAppPhotoElement
     'app-presentation': HTMLAppPresentationElement
     'app-profile': HTMLAppProfileElement
+    'app-project-infos': HTMLAppProjectInfosElement
     'app-projects-gallery': HTMLAppProjectsGalleryElement
     'app-root': HTMLAppRootElement
     'app-title': HTMLAppTitleElement
@@ -209,6 +225,7 @@ declare global {
     'app-photo': HTMLAppPhotoElement;
     'app-presentation': HTMLAppPresentationElement;
     'app-profile': HTMLAppProfileElement;
+    'app-project-infos': HTMLAppProjectInfosElement;
     'app-projects-gallery': HTMLAppProjectsGalleryElement;
     'app-root': HTMLAppRootElement;
     'app-title': HTMLAppTitleElement;

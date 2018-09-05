@@ -67,10 +67,12 @@ export class AppProjectsGallery {
                         <ion-row>
                             { this.projets.map((projet) => {
                                 return <ion-col class={ 'column-' + this.cardsPerRow }>
+                                    <ion-button href={`/project_infos/${this.projets.indexOf(projet)}`}>
                                     <img 
                                         class='project-logo' 
                                         src={this.rootPath + projet.directoryName + '/logo' + this.fileExtension} 
                                         onClick={ () => this.goToProjectDetails(projet) }/>
+                                         </ion-button>
                                 </ion-col>
                             }) }
                         </ion-row>
