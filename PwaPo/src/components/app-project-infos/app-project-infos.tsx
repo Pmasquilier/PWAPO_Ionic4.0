@@ -14,7 +14,7 @@ export class AppProjectInfos {
     private projets: Projet[];
     private projet: Projet;
     private rootPath = "../assets/projets/";
-    private fileExtension = '.jpg';
+    private fileExtension = '.png';
 
     componentWillLoad() {
         this.projets = getProjets();
@@ -30,7 +30,7 @@ export class AppProjectInfos {
 
         return (
             <ion-card>
-            <ion-slides>
+            <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
                             <lazy-img class="lazy-img-photo" src={this.rootPath + this.projet.directoryName + '/' +  url + this.fileExtension}></lazy-img>
@@ -39,11 +39,10 @@ export class AppProjectInfos {
                 </ion-slides>
             <ion-card-content>
               <ion-card-title>
-                Nine Inch Nails Live
+               {this.projet.directoryName}
                 </ion-card-title>
               <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
+                {this.projet.description}
               </p>
             </ion-card-content>
           </ion-card>

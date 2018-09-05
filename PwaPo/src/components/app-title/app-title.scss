@@ -8,6 +8,9 @@ position: relative;
   ion-toolbar {
     --ion-color-primary: linear-gradient(60deg, var(--app-secondary-color), var(--app-third-color));
     display : flex;
+    padding: 0px;
+    min-height: 56px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
   }
 
   .imgToolBar {
