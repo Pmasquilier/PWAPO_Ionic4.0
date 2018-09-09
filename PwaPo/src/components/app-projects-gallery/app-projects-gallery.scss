@@ -17,36 +17,43 @@
 }
 
 
-    
-        ion-row {
-            display: flex;
-            flex-direction: normal;
-            flex-wrap: wrap;
 
-            ion-col {
 
-                &.column-2 {
-                    @include two-column-gallery()
-                }
+app-projects-gallery{
 
-                &.column-3 {
-                    @include three-column-gallery()
-                }
+    .button-solid{
+        --ion-color-base: none;
+        --height: ;
+        --box-shadow : none;
+    }
 
-                &.column-4 {
-                    @include four-column-gallery()
-                }
+        
+    ion-row {
+        display: flex;
+        flex-direction: normal;
+        flex-wrap: wrap;
 
-                img.project-logo {
-                    background-size: cover;
-                    width: 100%;
-                }
+        ion-col {
+
+            &.column-2 {
+                @include two-column-gallery()
+            }
+
+            &.column-3 {
+                @include three-column-gallery()
+            }
+
+            &.column-4 {
+                @include four-column-gallery()
+            }
+
+            img.project-logo {
+                background-size: cover;
+                width: 100%;
             }
         }
-    
-
-.button-solid{
-    --ion-color-base: none;
-    --height: ;
-    --box-shadow : none;
+    }
 }
+
+
+
