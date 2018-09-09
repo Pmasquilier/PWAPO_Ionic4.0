@@ -16,8 +16,8 @@
     max-width: 25%;
 }
 
-app-projects-gallery {
-    .grid {
+
+    
         ion-row {
             display: flex;
             flex-direction: normal;
@@ -43,5 +43,10 @@ app-projects-gallery {
                 }
             }
         }
-    }
+    
+
+.button-solid{
+    --ion-color-base: none;
+    --height: ;
+    --box-shadow : none;
 }

@@ -2,7 +2,7 @@ import { getFilesExtension, getProjectsRootPath, getProjets } from '../../helper
 
 import { Component } from '@stencil/core';
 import { Projet } from '../../model/projet';
-import Swiper from 'swiper';
+
 
 @Component({
     tag: 'app-client',
@@ -18,8 +18,6 @@ export class AppClient {
 
     protected pictures: string[];
 
-    protected horizontalSwiper: Swiper;
-    protected verticalSwiper: Swiper;
 
     componentWillLoad() {
         this.fileExtension = getFilesExtension();
@@ -28,22 +26,8 @@ export class AppClient {
     }
 
     componentDidLoad() {
-        this.horizontalSwiper = new Swiper('.swiper-container-h', {
-            spaceBetween: 50,
-            pagination: {
-                el: '.swiper-pagination-h',
-                clickable: true,
-            },
-        });
-        this.verticalSwiper = new Swiper('.swiper-container-v', {
-            spaceBetween: 50,
-            pagination: {
-                el: '.swiper-pagination-v',
-                clickable: true,
-            },
-            direction: 'horizontal',
-            nested: true
-        });
+     
+     
 
     }
 
@@ -55,8 +39,7 @@ export class AppClient {
             <ion-page>
                 <ion-content>
 
-                    <div class="swiper-container swiper-container-h">
-                        <div class="swiper-wrapper">
+                    
                             { this.projets.map((projet) => {
                                 return <div class={"swiper-slide " + projet.directoryName}>
                                     <img class='logo' src={this.rootPath + projet.directoryName + '/logo' + this.fileExtension} />
@@ -76,10 +59,8 @@ export class AppClient {
                                     </div>
                                 </div>  
                             }) }
-                        </div>
-                        
-                        <div class="swiper-pagination swiper-pagination-h"></div>
-                    </div>
+                      
+                       
                 </ion-content>
             </ion-page>
         );
