@@ -1,16 +1,22 @@
 app-title {
 
-  text-align: center;
-position: relative;
-  max-height: 10px;
-  --pading-bottom: 0px;
+
   
+    text-align: center;
+    position: relative;
+    max-height: 10px;
+     
+
+  
+
+
   ion-toolbar {
     --ion-color-primary: linear-gradient(60deg, var(--app-secondary-color), var(--app-third-color));
     display : flex;
     padding: 0px;
     min-height: 56px;
     font-family: Roboto,"Helvetica Neue",sans-serif;
+
   }
 
   .imgToolBar {
@@ -24,8 +30,8 @@ position: relative;
   }
 
   ion-title{
+    padding-top : 6px;
     display: inline-block;
-    vertical-align: center;
     text-align: center;
     font-weight: 700;
     width: fit-content;
