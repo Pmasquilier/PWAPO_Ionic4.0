@@ -33,10 +33,11 @@ app-project-infos{
         padding-top: 0.5rem;
     }
     
-    lazy-img{
-        
+   
+
+    .swiper-slide{
         img{
-            max-width: 4rem;
+            max-width: 11rem;
           
         }
     }
@@ -53,13 +54,19 @@ app-project-infos{
     }
 
     .logo_photo{
-        display:flex;
-        justify-content: center;
+        display: flex;
+        display: inline-block;  
+        width: 5rem;
+        height: 5rem;
         margin-top: 1rem;
-        max-height: 4rem;
-      
+    }
+
+    .div-enfant-logo-photo{
+        width: 100%;
+        text-align: center;
     }
 
     
+   
 }
 
