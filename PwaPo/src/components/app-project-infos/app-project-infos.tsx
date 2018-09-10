@@ -29,7 +29,21 @@ export class AppProjectInfos {
     render() {
 
         return (
-            <ion-card>
+            
+            
+            <div class="div-parent">
+
+             
+                <lazy-img class="logo_photo" src={this.rootPath + this.projet.directoryName + '/' +  "logo" + this.fileExtension}></lazy-img> 
+             
+
+              
+              <p class = "projet-description">
+                {this.projet.description}
+              </p>
+           
+            
+           
             <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
@@ -37,15 +51,8 @@ export class AppProjectInfos {
                         </ion-slide>
                     })}
                 </ion-slides>
-            <ion-card-content>
-              <ion-card-title class="underline">
-               {this.projet.directoryName}
-                </ion-card-title>
-              <p>
-                {this.projet.description}
-              </p>
-            </ion-card-content>
-          </ion-card>
+            </div> 
+          
         );
     }
 }

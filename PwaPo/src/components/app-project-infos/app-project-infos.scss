@@ -1,12 +1,17 @@
 
 app-project-infos{
+
+    .div-parent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
     ion-slide{
-        display : block !important;
-        height: 50% !important;
-        width: 40% !important;
-        padding: 0px 0px 20px 0px;
+        display : flex !important;
+        padding: 0rem 0rem 2rem 0rem;
         line-height: 1.5;
-        margin: 10px 105px;
+        margin: 0.5rem 0rem;
     }
     
     
@@ -21,8 +26,40 @@ app-project-infos{
         text-align: center;
     
     }
+
+    ion-card-title{
+        font-size: 35px;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
     
+    lazy-img{
+        
+        img{
+            max-width: 4rem;
+          
+        }
+    }
 
+  
 
+    .projet-description{
+        display : flex;
+        font-size: 0.8rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        text-align: center;
+
+    }
+
+    .logo_photo{
+        display:flex;
+        justify-content: center;
+        margin-top: 1rem;
+        max-height: 4rem;
+      
+    }
+
+    
 }
 
