@@ -47,7 +47,7 @@ export class AppProjectInfos {
             <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
-                            <lazy-img class="lazy-img-photo" src={this.rootPath + this.projet.directoryName + '/' +  url + this.fileExtension}></lazy-img>
+                            <lazy-img src={this.rootPath + this.projet.directoryName + '/' +  url + this.fileExtension}></lazy-img>
                         </ion-slide>
                     })}
                 </ion-slides>

@@ -28,22 +28,30 @@ export class AppPhoto {
 
         return (
 
+      
             <ion-content>
+
+                    
                 <ion-slides >
                     
                     {this.picturesUrls.map((url) => {
                         return  <ion-slide>
-                            <lazy-img class="lazy-img-photo" src={this.rootPath + url + this.fileExtension}></lazy-img>
+                            <div  >
+                            <lazy-img src={this.rootPath + url + this.fileExtension}></lazy-img>
                             {/* <a class="download-link" target="_self" href={this.rootPath + url + this.fileExtension} download={index}>
                               <img src="./assets/icon/ic_file_download_black.svg"/>
                             </a> */}
+                            </div>
                         </ion-slide>
                         
                     })}
                     
                 </ion-slides>
+
+                
             </ion-content>
 
+         
         );
     }
 }
