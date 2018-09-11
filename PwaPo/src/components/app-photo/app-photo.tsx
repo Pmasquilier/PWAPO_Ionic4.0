@@ -36,12 +36,12 @@ export class AppPhoto {
                     
                     {this.picturesUrls.map((url) => {
                         return  <ion-slide>
-                            <div  >
+                            
                             <lazy-img src={this.rootPath + url + this.fileExtension}></lazy-img>
                             {/* <a class="download-link" target="_self" href={this.rootPath + url + this.fileExtension} download={index}>
                               <img src="./assets/icon/ic_file_download_black.svg"/>
                             </a> */}
-                            </div>
+                            
                         </ion-slide>
                         
                     })}

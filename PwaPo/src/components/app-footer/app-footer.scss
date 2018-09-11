@@ -1,5 +1,14 @@
 
 app-footer {
+
+    ion-footer{
+      ion-button{
+        --background-activated : none;
+      }
+    }
+
+
+
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -21,10 +30,10 @@ app-footer {
       -webkit-font-smoothing: antialiased;
       --box-shadow : none;
     }
-
   }
-  
 
   ion-toolbar{
     --ion-color-primary: ;
+    
   }
+
