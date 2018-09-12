@@ -12,6 +12,15 @@ export class AppFooter {
     render() {
 
         return (
+
+          /*   <ion-tabs>
+                        <ion-tab name="tab-home" icon="home"></ion-tab>
+                        <ion-tab name="tab-images" icon="images"></ion-tab>
+                        <ion-tab name="tab-projets" icon="ribbon"></ion-tab>
+                        <ion-tab name="tab-documents" icon="folder"></ion-tab>
+                    </ion-tabs> */
+
+                    
             <ion-footer class="app-footer">
 
                 <ion-button href='/'>
