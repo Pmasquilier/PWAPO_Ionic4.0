@@ -42,8 +42,6 @@ export class AppProjectInfos {
                 {this.projet.description}
               </p>
            
-            
-         
             <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
@@ -52,6 +50,7 @@ export class AppProjectInfos {
                     })}
                 </ion-slides>
             </div> 
+       
       
         );
     }

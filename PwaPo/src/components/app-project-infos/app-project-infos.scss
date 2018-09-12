@@ -6,51 +6,33 @@ app-project-infos{
         flex-direction: column;
     }
 
-    
-    ion-slide{
-        display : flex !important;
-        padding: 0rem 0rem 2rem 0rem;
-        line-height: 1.5;
-        margin: 0rem 0rem;
+    ion-slides{
+        ion-slide{
+            display : flex !important;
+            flex: 1 1 auto;
+            margin:0.5rem 0rem 2rem 0rem;
+        }
     }
+    
     
     
     .underline{
         text-decoration: underline;
     }
     
-    ion-card-content{
-        padding: 70px;
-        line-height: 200px;
-        height: 200px;
-        text-align: center;
-    
-    }
-
-    ion-card-title{
-        font-size: 35px;
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-    }
-    
-   
-
     .swiper-slide{
         img{
-            max-width: 11rem;
-          
+            max-width: 12rem;
         }
     }
 
-  
-
     .projet-description{
         display : flex;
-        font-size: 0.8rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        font-size: 0.6rem;
+        margin-right: 0.1rem;
+        margin-left: 0.1rem;
         text-align: center;
-
+        overflow: scroll;
     }
 
     .logo_photo{
@@ -65,9 +47,7 @@ app-project-infos{
         width: 100%;
         text-align: center;
     }
-
     
     
-   
 }
 
