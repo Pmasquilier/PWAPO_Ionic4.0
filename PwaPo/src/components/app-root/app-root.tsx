@@ -34,43 +34,43 @@ export class MyApp {
     window.location.reload();
   }
 
-  renderRouter(){
-    return(
-      /* <ion-router useHash={false}>
+  renderRouter() {
+    return (
+      {/* <ion-router useHash={false}>
 
-          <ion-route component = "app-footer">
+        <ion-route component="app-footer">
 
-            <ion-route url='/' component='tab-home'>
-              <ion-route component="app-home"></ion-route>
-            </ion-route>
-
-            <ion-route url='/photo' component='tab-images'>
-              <ion-route component='app-photo'></ion-route>
-            </ion-route>
-
-            <ion-route url='/projects' component='tab-projets'>
-              <ion-route component='app-projects-gallery'></ion-route>
-            </ion-route>
-
-            <ion-route url='/documents' component='tab-documents'>
-              <ion-route component='app-documents'></ion-route>
-            </ion-route>
-
-            
+          <ion-route url='/' component='tab-home'>
+            <ion-route component="app-home"></ion-route>
           </ion-route>
 
-        <ion-nav root='app-home'></ion-nav>
-          <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
-          </ion-router> */
+          <ion-route url='/photo' component='tab-images'>
+            <ion-route component='app-photo'></ion-route>
+          </ion-route>
 
-        {/* <ion-router useHash={false}>
-          <ion-route url='/' component='app-home'></ion-route>
-          <ion-route url='/photo' component='app-photo'></ion-route>
-          <ion-route url='/projects' component='app-projects-gallery'></ion-route>
-          <ion-route url='/client' component='app-client'></ion-route>
-          <ion-route url='/documents' component='app-documents'></ion-route>
-          <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
-        </ion-router> */}
+          <ion-route url='/projects' component='tab-projets'>
+            <ion-route component='app-projects-gallery'></ion-route>
+          </ion-route>
+
+          <ion-route url='/documents' component='tab-documents'>
+            <ion-route component='app-documents'></ion-route>
+          </ion-route>
+
+
+        </ion-route>
+
+        <ion-nav root='app-home'></ion-nav>
+        <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
+      </ion-router> */}
+
+      /* <ion-router useHash={false}>
+        <ion-route url='/' component='app-home'></ion-route>
+        <ion-route url='/photo' component='app-photo'></ion-route>
+        <ion-route url='/projects' component='app-projects-gallery'></ion-route>
+        <ion-route url='/client' component='app-client'></ion-route>
+        <ion-route url='/documents' component='app-documents'></ion-route>
+        <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
+      </ion-router> */
 
     );
   }
@@ -81,16 +81,14 @@ export class MyApp {
       <ion-app>
         <main>
           <app-title />
-
           <ion-router useHash={false}>
-          <ion-route url='/' component='app-home'></ion-route>
-          <ion-route url='/photo' component='app-photo'></ion-route>
-          <ion-route url='/projects' component='app-projects-gallery'></ion-route>
-          <ion-route url='/client' component='app-client'></ion-route>
-          <ion-route url='/documents' component='app-documents'></ion-route>
-          <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
+            <ion-route url='/' component='app-home'></ion-route>
+            <ion-route url='/photo' component='app-photo'></ion-route>
+            <ion-route url='/projects' component='app-projects-gallery'></ion-route>
+            <ion-route url='/client' component='app-client'></ion-route>
+            <ion-route url='/documents' component='app-documents'></ion-route>
+            <ion-route url='/project_infos/:Id' component='app-project-infos'></ion-route>
           </ion-router>
-
           <ion-nav root='app-home'></ion-nav>
           <app-footer />
          

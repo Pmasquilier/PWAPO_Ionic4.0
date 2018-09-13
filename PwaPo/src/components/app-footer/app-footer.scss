@@ -1,42 +1,47 @@
-
 app-footer {
 
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-image: -moz-linear-gradient(30deg, var(--app-third-color), var(--app-secondary-color));
-  background-image: -webkit-linear-gradient(30deg,  var(--app-third-color), var(--app-secondary-color));
+  background-image: -webkit-linear-gradient(30deg, var(--app-third-color), var(--app-secondary-color));
   background-image: -o-linear-gradient(30deg, var(--app-third-color), var(--app-secondary-color));
   background-image: linear-gradient(60deg, var(--app-third-color), var(--app-secondary-color));
 
-    ion-footer{
-      height :3rem;
-      ion-button{
-        --background-activated : none;
-      }
+  ion-footer {
 
-      ion-tabs{
-          --ion-tabbar-background-color: linear-gradient(60deg, var(--app-third-color), var(--app-secondary-color));
-          --color : white;
-          --color-selected: black;
-      }
-  
-    }
+    height: 3rem;
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  
-    ion-button{
+    ion-button {
+      --background-activated: none;
       height: 3rem;
       width: 25%;
       margin: 0;
       border-radius: 0;
       box-shadow: none !important;
-      border-color: rgba(0,0,0,0) !important;
+      border-color: rgba(0, 0, 0, 0) !important;
       outline: none !important;
       --background: transparent !important;
       -webkit-font-smoothing: antialiased;
-      --box-shadow : none;
+      --box-shadow: none;
+
+      .button_active {
+        width: 1.4em;
+        height: 1.4em;
+      }
+
+      .button_inactive {
+        width: 0.9em;
+        height: 0.9em;
+      }
     }
+
+    ion-tabs {
+      --ion-tabbar-background-color: linear-gradient(60deg, var(--app-third-color), var(--app-secondary-color));
+      --color: white;
+      --color-selected: black;
+    }
+
   }
-
- 
-
+}
