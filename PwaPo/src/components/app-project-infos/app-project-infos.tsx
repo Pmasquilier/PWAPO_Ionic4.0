@@ -1,6 +1,7 @@
-import {Prop, Component} from '@stencil/core';
+import { Prop, Component } from '@stencil/core';
 import { Projet } from '../../model/projet';
-import {getProjets } from '../../helpers/dataHelper';
+import { getProjets } from '../../helpers/dataHelper';
+import { NavigationServiceData } from '../../helpers/NavigationService';
 
 @Component({
     tag: 'app-project-infos',
@@ -16,42 +17,47 @@ export class AppProjectInfos {
     private rootPath = "../assets/projets/";
     private fileExtension = '.png';
 
+    constructor(){
+        NavigationServiceData.setCurrentPage("app-project-infos");
+    }
+
     componentWillLoad() {
         this.projets = getProjets();
         this.projet = this.projets[this.Id];
         console.log("Id : " + this.Id);
         console.log("Projet : " + this.projet);
-        
-
     }
 
 
     render() {
 
         return (
-            
-            
+
+
+
+
             <div class="div-parent">
+
+                   
+
                 <div class="div-enfant-logo-photo">
-             
-                <lazy-img class="logo_photo" src={this.rootPath + this.projet.directoryName + '/' +  "logo" + this.fileExtension}></lazy-img> 
-             
-                </div> 
-              
-              <p class = "projet-description">
-                {this.projet.description}
-              </p>
-           
-            <ion-slides pager>
+                    <lazy-img class="logo_photo" src={this.rootPath + this.projet.directoryName + '/' + "logo" + this.fileExtension}></lazy-img>
+                </div>
+
+                <p class="projet-description">
+                    {this.projet.description}
+                </p>
+
+                <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
-                            <lazy-img src={this.rootPath + this.projet.directoryName + '/' +  url + this.fileExtension}></lazy-img>
+                            <lazy-img src={this.rootPath + this.projet.directoryName + '/' + url + this.fileExtension}></lazy-img>
                         </ion-slide>
                     })}
                 </ion-slides>
-            </div> 
-       
-      
+            </div>
+
+
         );
     }
 }

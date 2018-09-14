@@ -1,6 +1,8 @@
 import { Component, State } from '@stencil/core';
 import { getDocuments, getDocumentsRootPath } from '../../helpers/dataHelper';
 
+import { NavigationServiceData } from '../../helpers/NavigationService';
+
 @Component({
     tag: 'app-documents',
     styleUrl: 'app-documents.scss'
@@ -12,6 +14,10 @@ export class AppDocuments {
     @State() rootPath: string;
 
     @State() files;
+
+     constructor(){
+        NavigationServiceData.setCurrentPage("app-documents")
+    }
 
     componentWillLoad() {
         this.rootPath = getDocumentsRootPath();

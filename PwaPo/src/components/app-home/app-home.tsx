@@ -1,4 +1,6 @@
 import { Component } from '@stencil/core';
+import { NavigationServiceData } from '../../helpers/NavigationService';
+
 
 @Component({
   tag: 'app-home',
@@ -7,7 +9,12 @@ import { Component } from '@stencil/core';
 export class AppHome {
   rootPage:any = "HomePage";
 
+  constructor(){
+    NavigationServiceData.setCurrentPage("app-home");
+  }
+
   render() {
+
     return (
 
         <ion-content>

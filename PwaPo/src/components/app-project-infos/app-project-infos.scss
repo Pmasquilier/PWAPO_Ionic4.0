@@ -42,13 +42,26 @@ app-project-infos{
     .logo_photo{
         display: flex;
         display: inline-block;  
+        text-align: center;
         width: 5rem;
         height: 5rem;
-        margin-top: 1rem;
+        padding-top: 1rem;
+    
+    }
+
+    .button_back{
+        display : flex;
+        display : inline-block;
+
     }
 
     .div-enfant-logo-photo{
         width: 100%;
+        text-align: center;
+       
+    }
+
+    .top_customize{
         text-align: center;
     }
     
