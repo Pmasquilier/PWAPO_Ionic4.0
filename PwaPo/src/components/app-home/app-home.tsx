@@ -1,5 +1,4 @@
 import { Component } from '@stencil/core';
-import { NavigationServiceData } from '../../helpers/NavigationService';
 
 
 @Component({
@@ -9,8 +8,10 @@ import { NavigationServiceData } from '../../helpers/NavigationService';
 export class AppHome {
   rootPage:any = "HomePage";
 
+
   constructor(){
-    NavigationServiceData.setCurrentPage("app-home");
+    console.log("app-home.tsx : set the current page to app-home");
+     window['currentPage'] = "app-home";
   }
 
   render() {
@@ -21,6 +22,9 @@ export class AppHome {
           <app-presentation />
 
           <app-facebookvideo/>
+
+          <app-presentation-text/>
+
         </ion-content>
 
 

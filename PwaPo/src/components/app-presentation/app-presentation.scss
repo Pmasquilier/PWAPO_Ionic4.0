@@ -1,4 +1,8 @@
 app-presentation {
+
+    font-family: 'Open Sans', sans-serif;
+
+   
     ion-scroll {
       padding: 15px;
       p {
@@ -14,15 +18,23 @@ app-presentation {
     }
     .margined-div {
       margin: 1.5rem;
+
+      h2{
+        font-size: 1.2rem;
+        text-align: center;
+      }
     }
+
     .big-text {
       font-size: 1rem;
       font-weight: bold;
     }
+
     .small-text {
       font-size: 0.8rem;
       color: var(--app-primary-color);
     }
+    
     .colored-text {
       color: var(--app-primary-color);
     }
@@ -30,5 +42,7 @@ app-presentation {
     .swiper-slide{
      max-height: 90% !important;
     }
+
+    
   }
   

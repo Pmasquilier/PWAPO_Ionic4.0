@@ -41,6 +41,9 @@ export namespace Components {
   interface AppPhoto {}
   interface AppPhotoAttributes extends StencilHTMLAttributes {}
 
+  interface AppPresentationText {}
+  interface AppPresentationTextAttributes extends StencilHTMLAttributes {}
+
   interface AppPresentation {}
   interface AppPresentationAttributes extends StencilHTMLAttributes {}
 
@@ -87,6 +90,7 @@ declare global {
     'AppFooter': Components.AppFooter;
     'AppHome': Components.AppHome;
     'AppPhoto': Components.AppPhoto;
+    'AppPresentationText': Components.AppPresentationText;
     'AppPresentation': Components.AppPresentation;
     'AppProfile': Components.AppProfile;
     'AppProjectInfos': Components.AppProjectInfos;
@@ -104,6 +108,7 @@ declare global {
     'app-footer': Components.AppFooterAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-photo': Components.AppPhotoAttributes;
+    'app-presentation-text': Components.AppPresentationTextAttributes;
     'app-presentation': Components.AppPresentationAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-project-infos': Components.AppProjectInfosAttributes;
@@ -156,6 +161,12 @@ declare global {
     new (): HTMLAppPhotoElement;
   };
 
+  interface HTMLAppPresentationTextElement extends Components.AppPresentationText, HTMLStencilElement {}
+  var HTMLAppPresentationTextElement: {
+    prototype: HTMLAppPresentationTextElement;
+    new (): HTMLAppPresentationTextElement;
+  };
+
   interface HTMLAppPresentationElement extends Components.AppPresentation, HTMLStencilElement {}
   var HTMLAppPresentationElement: {
     prototype: HTMLAppPresentationElement;
@@ -206,6 +217,7 @@ declare global {
     'app-footer': HTMLAppFooterElement
     'app-home': HTMLAppHomeElement
     'app-photo': HTMLAppPhotoElement
+    'app-presentation-text': HTMLAppPresentationTextElement
     'app-presentation': HTMLAppPresentationElement
     'app-profile': HTMLAppProfileElement
     'app-project-infos': HTMLAppProjectInfosElement
@@ -223,6 +235,7 @@ declare global {
     'app-footer': HTMLAppFooterElement;
     'app-home': HTMLAppHomeElement;
     'app-photo': HTMLAppPhotoElement;
+    'app-presentation-text': HTMLAppPresentationTextElement;
     'app-presentation': HTMLAppPresentationElement;
     'app-profile': HTMLAppProfileElement;
     'app-project-infos': HTMLAppProjectInfosElement;
