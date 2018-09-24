@@ -1,5 +1,4 @@
 import { Component, State } from '@stencil/core';
-import { NavigationServiceData } from '../../helpers/NavigationService';
 
 
 @Component({
@@ -12,20 +11,42 @@ export class AppTitle {
     @State() rootIconPath: string = './assets/icon/';
     @State() fileExtension: string = '.png';
     @State() mfPictureUrl: string;
+    @State() currentPage = window['currentPage'];
 
+    private pagesToDisplayWithMainHeader = ["app-project-gallery", "app-projects-gallery", "app-home", "app-documents"];
 
+    constructor(){        
+        
+    }
+
+    componentDidMount(){
+        
+
+    }
+
+    public whichIsTheHeaderToDisplay () : string{
+        if (this.pagesToDisplayWithMainHeader.indexOf(this.currentPage)){
+            console.log("Header is now: mainHeader");
+            return "mainHeader";
+        }
+        else{
+            console.log("Header is now: secondHeader");
+            return "secondHeader";
+        }
+    }
 
     componentWillLoad() {
         this.mfPictureUrl = this.rootIconPath + "MobileFactory_Logo.svg";
+        
+      
     }
-
 
     render() {
 
-        console.log("We will display the header : " + NavigationServiceData.whichIsTheHeaderToDisplay());
+        console.log("app-title Render Current page : " + this.currentPage);
 
 
-        if (NavigationServiceData.whichIsTheHeaderToDisplay() === "mainHeader") {
+        if (this.whichIsTheHeaderToDisplay() === "mainHeader") {
             return (
 
                 <ion-header class="bar-header bar-stable headerToolbar degrade" >
@@ -37,7 +58,7 @@ export class AppTitle {
                                 <ion-col col-2>
                                     <img class="imgToolBar" src={this.mfPictureUrl}> </img>
                                 </ion-col>
-                                <ion-col col-6>
+                                <ion-col col-6 >
                                     <ion-title >La Mobile Factory</ion-title>
                                 </ion-col>
                                 <ion-col col-2>
