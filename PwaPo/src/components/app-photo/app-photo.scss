@@ -1,12 +1,21 @@
 app-photo {
 
-
+  
   transition-duration: 30ms !important;
+
+  ion-content{
+    ion-slides{
+      .swiper-wrapper{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
   
 
   .swiper-slide {
     img {
-      
+      border-radius: 1.1rem;
       width: auto;
       max-width: 100%;
       height: auto;
@@ -15,6 +24,8 @@ app-photo {
       padding-top:  0.5rem;
       padding-left:  0.5rem;
       padding-bottom:  0.1rem;
+
+      
 
     }
   }
