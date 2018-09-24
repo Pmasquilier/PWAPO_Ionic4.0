@@ -60,7 +60,7 @@ export class AppFacebookVideo {
       <div>
         <ion-grid>
           <ion-row justify-content-center>
-            <ion-col size="4">
+            <ion-col size="7">
               <ion-icon name="play" onClick={(event: UIEvent) => this.lireVideo(event)}></ion-icon>
               <img src="../../assets/pictures/mobileFactoryVideo.PNG" onClick={(event: UIEvent) => this.lireVideo(event)}>
               </img>

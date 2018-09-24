@@ -11,7 +11,7 @@ app-project-infos {
   }
 
   ion-slides {
-    --bullet-background-active :linear-gradient(60deg, var(--app-secondary-color), var(--app-third-color)) !important;
+    --bullet-background-active: linear-gradient(60deg, var(--app-secondary-color), var(--app-third-color)) !important;
     display: flex;
     flex: 1 1 auto;
     display: block !important;
@@ -21,12 +21,10 @@ app-project-infos {
 
 
     .swiper-wrapper {
-
       ion-slide {
-
         lazy-img {
-          max-height: 24rem;
-          max-width: 10rem;
+         height: 95%;
+         width: 95%;
         }
       }
     }
@@ -34,6 +32,7 @@ app-project-infos {
 
   .projet-description {
     display: flex;
+    flex: 1 1 auto;
     font-size: 0.7rem;
     margin-right: 1rem;
     margin-left: 1rem;

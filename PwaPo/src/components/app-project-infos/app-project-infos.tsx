@@ -43,10 +43,11 @@ export class AppProjectInfos {
                     <lazy-img class="logo_photo" src={this.rootPath + this.projet.directoryName + '/' + "logo" + this.fileExtension}></lazy-img>
                 </div>
 
+                <div class = "projet-description-div">
                 <p class="projet-description">
                     {this.projet.description}
                 </p>
-
+                </div>
                 <ion-slides pager>
                     {this.projet.screenshots.map((url) => {
                         return <ion-slide>
