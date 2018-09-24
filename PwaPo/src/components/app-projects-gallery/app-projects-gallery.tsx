@@ -1,7 +1,7 @@
-import { Component, Listen, State } from '@stencil/core';
+import { Component, Listen, State, Prop } from '@stencil/core';
 import { getFilesExtension, getProjectsRootPath, getProjets } from '../../helpers/dataHelper';
 import { Projet } from '../../model/projet';
-
+import { Image } from '../../model/image';
 
 @Component({
     tag: 'app-projects-gallery',
@@ -15,18 +15,56 @@ export class AppProjectsGallery {
     private columns: number;
 
     @State()
-    private projets: Projet[]; 
+    private projets: Projet[];
     @State()
     private fileExtension: string;
     @State()
-    private rootPath: string;  
+    private rootPath: string;
+
+    @State() tabImage: Image[];
+
+    @State() top: number;
+
+
+    @State() imageLogo: HTMLImageElement[];
+
+    @Prop({ context: 'imageCoordonate' }) imageCoordonate: Image;
+
+    constructor() {
+        this.imageLogo = [];
+    }
 
     componentWillLoad() {
         this.computeGridProperties();
         this.projets = getProjets();
         this.fileExtension = getFilesExtension();
         this.rootPath = getProjectsRootPath();
+        /* this.initializePosition();
+        this.displayTabImage();  */
+    }
 
+    componentDidLoad() {
+        /*  this.initializePosition();
+         this.displayTabImage();  */
+    }
+
+    initializePosition() {
+
+        console.log("InitializePosition");
+
+        this.tabImage = [];
+        for (var i = 0; i < this.projets.length; i++) {
+            var element = document.getElementById("img" + i);
+            var r = element.getBoundingClientRect();
+            this.tabImage.push(new Image(r.left, r.right, r.bottom, r.top));
+        }
+
+    }
+
+    displayTabImage() {
+        for (var i = 0; i < this.tabImage.length; i++) {
+            console.log(this.tabImage[i]);
+        }
     }
 
     /**
@@ -53,10 +91,18 @@ export class AppProjectsGallery {
         }
     }
 
-    private goToProjectDetails(projet: Projet)  {
-        console.log(projet);
-       
-    }
+    // récupère la position d'un logo en fonction de son index
+    getPos(index: number, event) {
+
+        console.log("Event : " + event + "position projet :" +index);
+
+      /*   var element = this.imageLogo[index];
+        var r = element.getBoundingClientRect();
+        this.imageCoordonate = new Image(r.left, r.right, r.bottom, r.top);
+        this.top = r.top;
+        console.log("Les dimensions du rectangle sont :");
+        console.log("{top:" + r.top + ", left:" + r.left + ", right:" + r.right + ", bottom:" + r.bottom + "}");
+   */  }
 
     render() {
 
@@ -65,16 +111,15 @@ export class AppProjectsGallery {
                 <ion-content>
                     <ion-grid>
                         <ion-row>
-                            { this.projets.map((projet) => {
-                                return <ion-col class={ 'column-' + this.cardsPerRow }>
-                                    <ion-button href={`/project_infos/${this.projets.indexOf(projet)}`}>
-                                    <img 
-                                        class='project-logo' 
-                                        src={this.rootPath + projet.directoryName + '/logo' + this.fileExtension} 
-                                        onClick={ () => this.goToProjectDetails(projet) }/>
-                                         </ion-button>
+                            {this.projets.map((projet, index) => {
+                                return <ion-col class={'column-' + this.cardsPerRow}>
+                                    <ion-button onClick={(event: UIEvent) => this.getPos(index, event)} href={`/project_infos/${this.projets.indexOf(projet)}`} >
+                                        <img ref={(el: HTMLImageElement) => this.imageLogo = [...this.imageLogo, el]}
+                                            class='project-logo'
+                                            src={this.rootPath + projet.directoryName + '/logo' + this.fileExtension} />
+                                    </ion-button>
                                 </ion-col>
-                            }) }
+                            })}
                         </ion-row>
                     </ion-grid>
                 </ion-content>

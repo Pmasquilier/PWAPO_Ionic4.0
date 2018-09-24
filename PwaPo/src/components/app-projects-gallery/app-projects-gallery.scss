@@ -1,80 +1,84 @@
 @mixin two-column-gallery {
-    flex: 0 0 50%;
-    width: 50%;
-    max-width: 50%;
+  flex: 0 0 50%;
+  width: 50%;
+  max-width: 50%;
 }
 
 @mixin three-column-gallery {
-    flex: 0 0 33.33333%;
-    width: 33.33333%;
-    max-width: 33.33333%;
+  flex: 0 0 33.33333%;
+  width: 33.33333%;
+  max-width: 33.33333%;
 }
 
 @mixin four-column-gallery {
-    flex: 0 0 25%;
-    width: 25%;
-    max-width: 25%;
+  flex: 0 0 25%;
+  width: 25%;
+  max-width: 25%;
 }
 
 
 
 
-app-projects-gallery{
+app-projects-gallery {
 
-    transition-duration: 5ms !important;
+  transition-duration: 5ms !important;
 
-    ion-page{
-        ion-content{
-            ion-grid{
-                ion-row{
-                    ion-col{
-                        ion-button{
-                            --background-activated: none;
-                        }
-                    }
-                }
+  ion-page {
+    ion-content {
+      ion-grid {
+        ion-row {
+          ion-col {
+            ion-button {
+              --background-activated: none;
+
+              img {
+
+                border-radius: 1rem;
+
+
+              }
             }
+          }
         }
+      }
     }
+  }
 
-    .button-solid{
-        --ion-color-base: none;
-        --height: ;
-        --box-shadow : none;
+  .button-solid {
+    --ion-color-base: none;
+    --height: ;
+    --box-shadow: none;
+  }
+
+
+  ion-row {
+    display: flex;
+    flex-direction: normal;
+    flex-wrap: wrap;
+
+    ion-col {
+
+      &.column-2 {
+        @include two-column-gallery()
+      }
+
+      &.column-3 {
+        @include three-column-gallery()
+      }
+
+      &.column-4 {
+        @include four-column-gallery()
+      }
+
+      img.project-logo {
+        background-size: cover;
+        width: 100%;
+      }
     }
+  }
 
-        
-    ion-row {
-        display: flex;
-        flex-direction: normal;
-        flex-wrap: wrap;
+  ion-button {
+    --background: none;
+  }
 
-        ion-col {
-
-            &.column-2 {
-                @include two-column-gallery()
-            }
-
-            &.column-3 {
-                @include three-column-gallery()
-            }
-
-            &.column-4 {
-                @include four-column-gallery()
-            }
-
-            img.project-logo {
-                background-size: cover;
-                width: 100%;
-            }
-        }
-    }
-
-    ion-button{
-            --background: none;     
-    }
-    
 }
-
-
-
