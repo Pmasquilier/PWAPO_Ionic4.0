@@ -1,7 +1,6 @@
 import { Prop, Component } from '@stencil/core';
 import { Projet } from '../../model/projet';
 import { getProjets } from '../../helpers/dataHelper';
-import { NavigationServiceData } from '../../helpers/NavigationService';
 
 @Component({
     tag: 'app-project-infos',
@@ -17,29 +16,29 @@ export class AppProjectInfos {
     private rootPath = "../assets/projets/";
     private fileExtension = '.png';
 
-    constructor(){
-        NavigationServiceData.setCurrentPage("app-project-infos");
+    constructor() {
+        console.log("app-project-infos.tsx : set the current page to app-project-infos");
+        window['currentPage'] = "app-project-infos";
+        
     }
 
     componentWillLoad() {
         this.projets = getProjets();
         this.projet = this.projets[this.Id];
-        console.log("Id : " + this.Id);
-        console.log("Projet : " + this.projet);
+        console.log("Id : " + this.Id + " Projet : " + this.projet + "name of projet " + this.projet.directoryName);
+
+        
+    }
+
+    componentDidLoad() {
+
     }
 
 
     render() {
 
         return (
-
-
-
-
-            <div class="div-parent">
-
-                   
-
+            <div class= "div-parent" >
                 <div class="div-enfant-logo-photo">
                     <lazy-img class="logo_photo" src={this.rootPath + this.projet.directoryName + '/' + "logo" + this.fileExtension}></lazy-img>
                 </div>
@@ -56,8 +55,6 @@ export class AppProjectInfos {
                     })}
                 </ion-slides>
             </div>
-
-
         );
     }
 }

@@ -1,70 +1,64 @@
+app-project-infos {
 
-app-project-infos{
+  font-family: 'Open Sans', sans-serif;
+  transition-duration: 5ms !important;
+
+  .div-parent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  ion-slides {
+    --bullet-background-active :linear-gradient(60deg, var(--app-secondary-color), var(--app-third-color)) !important;
+    display: flex;
+    flex: 1 1 auto;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
 
 
-    transition-duration: 5ms !important;
 
-    
-    .div-parent{
-        display: flex;
-        flex-direction: column;
-    }
+    .swiper-wrapper {
 
-    ion-slides{
-        ion-slide{
-            display : flex !important;
-            flex: 1 1 auto;
-            margin:0.5rem 0rem 2rem 0rem;
+      ion-slide {
+
+        lazy-img {
+          max-height: 24rem;
+          max-width: 10rem;
         }
+      }
     }
-    
-    
-    
-    .underline{
-        text-decoration: underline;
-    }
-    
-    .swiper-slide{
-        img{
-            max-width: 12rem;
-        }
+  }
+
+  .projet-description {
+    display: flex;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    text-align: justify;
+  }
+
+  .logo_photo {
+    display: flex;
+    display: inline-block;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    padding-top: 1rem;
+
+  }
+
+  .div-enfant-logo-photo {
+    width: 100%;
+    text-align: center;
+
+    lazy-img {
+      img {
+        border-radius: 1rem;
+      }
     }
 
-    .projet-description{
-        display : flex;
-        font-size: 0.6rem;
-        margin-right: 0.1rem;
-        margin-left: 0.1rem;
-        text-align: center;
-        overflow: scroll;
-    }
-
-    .logo_photo{
-        display: flex;
-        display: inline-block;  
-        text-align: center;
-        width: 5rem;
-        height: 5rem;
-        padding-top: 1rem;
-    
-    }
-
-    .button_back{
-        display : flex;
-        display : inline-block;
-
-    }
-
-    .div-enfant-logo-photo{
-        width: 100%;
-        text-align: center;
-       
-    }
-
-    .top_customize{
-        text-align: center;
-    }
-    
-    
+  }
 }
-
