@@ -1,3 +1,63 @@
 app-facebookvideo {
 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  .card {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 999;
+    background: rgba(102, 102, 153, 0.8);
+
+    ion-icon {
+      position: absolute;
+      top: calc(50% - 130px) ;
+      right: 1.6rem;
+      size: 3rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: white;
+      z-index: 5;
+    }
+
+    ion-item {
+
+      --padding-start: 0;
+      --inner-padding-end: 0;
+
+      .video-container {
+        width: 100%;
+      }
+    }
+  }
+
+  ion-grid {
+    ion-row {
+      ion-col {
+        .text{
+          text-align: center;
+          padding-top: 0.5rem;
+        }
+        ion-icon {
+          position: absolute;
+          height: 1.75rem;
+          width: 1.75rem;
+          color: white;
+          top: calc(50% - 0.82rem);
+          left: calc(50% - 0.82rem);
+        }
+      }
+    }
+
+    padding: 0rem 0.5rem 1rem 1rem;
+  }
+
+
 }
