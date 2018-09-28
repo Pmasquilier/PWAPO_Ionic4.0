@@ -4,3 +4,9 @@
   }
 }
 
+
+@media all and (width: 1024px) {
+  .app-container {
+    background: './assets/pictures/background_desktop.png';
+  }
+}

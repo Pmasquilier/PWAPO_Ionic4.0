@@ -18,8 +18,8 @@ app-facebookvideo {
 
     ion-icon {
       position: absolute;
-      top: calc(50% - 130px) ;
-      right: 1.6rem;
+      top: calc(50% - 130px);
+      right: 0.2rem;
       size: 3rem;
       width: 1.5rem;
       height: 1.5rem;
@@ -29,11 +29,14 @@ app-facebookvideo {
 
     ion-item {
 
+      width: 100%;
+
       --padding-start: 0;
       --inner-padding-end: 0;
 
       .video-container {
         width: 100%;
+
       }
     }
   }
@@ -41,10 +44,11 @@ app-facebookvideo {
   ion-grid {
     ion-row {
       ion-col {
-        .text{
+        .text {
           text-align: center;
           padding-top: 2.3rem;
         }
+
         ion-icon {
           position: absolute;
           height: 1.75rem;

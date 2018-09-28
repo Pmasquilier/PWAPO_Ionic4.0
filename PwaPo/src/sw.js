@@ -6,7 +6,7 @@ self.workbox.clientsClaim();
 /*
   This is our code to handle push events.
 */
-self.addEventListener('push', (event) => {
+/* self.addEventListener('push', (event) => {
   console.log('[Service Worker] Push Received.');
   console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
@@ -18,6 +18,6 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
-});
+}); */
 
 self.workbox.precaching.precacheAndRoute([]);

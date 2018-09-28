@@ -22,9 +22,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
   var config = {
     apiKey: "AIzaSyDZe3ss2iu9jPJU32v0OXHPAuZnQ-muJfo",
     authDomain: "pwa-mobile-factory.firebaseapp.com",
@@ -43,8 +43,103 @@
   <link rel="manifest" href="/manifest.json">
 </head>
 
-<body>
-   <app-root></app-root>
+<body class='body-background'>
+  <span class="app-container">
+    <app-root class="mainApp"></app-root>
+  </span>
+
 </body>
 
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    @media  screen and (min-width: 750px) {
+        body,
+        html {
+          height: 100%;
+          margin: 0;
+        }
+        .body-background {
+          background: url('./assets/pictures/background_desktop.png');
+          background-repeat: no-repeat;
+          width: 100%;
+          background-size: 100vw 100vh;
+          background-attachment: fixed;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+        }
+        .app {
+          background: transparent;
+          display: flex;
+          width: 15.7%;
+          height: 60%;
+          margin: auto;
+        }
+        .mainApp {
+          display: flex;
+        }
+      }
+  
+    </style>
+
+
+  <meta charset="utf-8">
+  <title>PWA Toolkit</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Bienvenue dans l'application de présentation de la Mobile Factory!">
+  <meta name="theme-color" content="#16161d">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="La Mobile Factory">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+
+  <link href="/build/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDZe3ss2iu9jPJU32v0OXHPAuZnQ-muJfo",
+    authDomain: "pwa-mobile-factory.firebaseapp.com",
+    databaseURL: "https://pwa-mobile-factory.firebaseio.com",
+    projectId: "pwa-mobile-factory",
+    storageBucket: "pwa-mobile-factory.appspot.com",
+    messagingSenderId: "967228831959"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="/build/app.js"></script>
+
+  <link rel="apple-touch-icon" href="/assets/icon/icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body class='body-background'>
+  <span class="app-container">
+    <app-root class="mainApp"></app-root>
+  </span>
+
+</body>
+
+</html>
+ -->

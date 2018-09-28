@@ -26,9 +26,7 @@ export class AppProjectInfos {
         this.projets = getProjets();
         this.projet = this.projets[this.Id];
         console.log("Id : " + this.Id + " Projet : " + this.projet + "name of projet " + this.projet.directoryName);
-
-        
-    }
+ }
 
     componentDidLoad() {
 
